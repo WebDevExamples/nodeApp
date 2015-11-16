@@ -1,7 +1,7 @@
-: {
-2:   "name": "nodeApp",
-3:   "version": "1.0.0",
-4:   "dependencies": {
-5:     "express": "*"
-6:   }
-7: }
+{
+  "name": "nodeApp",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "*"
+  }
+}
