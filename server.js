@@ -21,6 +21,7 @@ http.createServer(function(req, res) {
     res.write('Connecting \n');
     // Use connect method to connect to the Server
     MongoClient.connect(url, function (err, db) {
+        res.write('Actually Connecting \n');
         if (err) {
             res.write('Unable to connect to the mongoDB server. Error:');
         } else {
