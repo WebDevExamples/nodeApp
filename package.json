@@ -4,4 +4,7 @@
   "dependencies": {
     "mongodb": "*"
   }
+  "scripts":{
+    "start": "node debug server.js"
+  }
 }
