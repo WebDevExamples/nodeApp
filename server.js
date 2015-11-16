@@ -33,6 +33,7 @@ http.createServer(function(req, res) {
             //Close connection
             db.close();
         }
+        res.end('Hello World\n');
     });
-    res.end('Hello World\n');
+
 }).listen(port);
