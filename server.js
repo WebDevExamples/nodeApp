@@ -23,10 +23,10 @@ http.createServer(function(req, res) {
     MongoClient.connect(url, function (err, db) {
         res.write('Actually Connecting \n');
         if (err) {
-            res.write('Unable to connect to the mongoDB server. Error:');
+            res.write('Unable to connect to the mongoDB server. Error:' + err + "\n");
         } else {
             //HURRAY!! We are connected. :)
-            res.write('Connection established to');
+            res.write('Connection established to' + url +"\n");
 
             // do some work here with the database.
 
