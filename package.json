@@ -1,0 +1,7 @@
+: {
+2:   "name": "npmdemo",
+3:   "version": "1.0.0",
+4:   "dependencies": {
+5:     "mongodb": "*"
+6:   }
+7: }
