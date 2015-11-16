@@ -18,7 +18,7 @@ var url = 'mongodb://main:basiltdog1@ds054308.mongolab.com:54308/rgutest';
 
 http.createServer(function(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.write('Connecting');
+    res.write('Connecting \n');
     // Use connect method to connect to the Server
     //MongoClient.connect(url, function (err, db) {
     //    if (err) {
