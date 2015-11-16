@@ -1,5 +1,5 @@
 : {
-2:   "name": "npmdemo",
+2:   "name": "nodeApp",
 3:   "version": "1.0.0",
 4:   "dependencies": {
 5:     "mongodb": "*"
