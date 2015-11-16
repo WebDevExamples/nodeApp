@@ -3,7 +3,7 @@
  */
 var http = require('http');
 //lets require/import the mongodb native drivers.
-//var mongodb = require('mongodb');
+var mongodb = require('mongodb');
 var port = process.env.PORT || 1337;
 
 
