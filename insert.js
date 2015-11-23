@@ -38,7 +38,7 @@ http.createServer(function(request, response) {
                 if (err) {
                     response.write(err);
                 } else {
-                    response.write('Inserted ' + result.length +' documents successfully.);
+                    response.write('Inserted ' + result.length +' documents successfully.');
                 }
             });
             //Close connection
