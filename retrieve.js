@@ -40,6 +40,7 @@ http.createServer(function(request, response) {
                 if (err) {
                     response.write(err);
                 } else {
+                    console.log(result);
                     response.write('Fetched:', result);
                 }
                 if (result == null) {
