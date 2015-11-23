@@ -41,7 +41,7 @@ http.createServer(function(request, response) {
                     response.write('Insert failed ' + err + "\n");
                 } else {
                     console.log(result);
-                    response.write('Inserted ' + result.length +' documents successfully.');
+                    response.write('Inserted ' + result.insertedCount +' documents successfully. +"\n"');
                 }
                 //Close connection
                 db.close();
