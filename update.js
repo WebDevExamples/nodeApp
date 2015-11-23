@@ -28,6 +28,7 @@ http.createServer(function(request, response) {
         } else {
             //HURRAY!! We are connected. :)
             response.write('Connection established to' + url +"\n");
+            var collection = db.collection('users');
             // Get the documents collection
             collection.update({name: 'modulus user'}, {$set: {enabled: false}}, function (err, numUpdated) {
                 if (err) {
