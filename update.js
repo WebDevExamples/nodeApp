@@ -37,6 +37,8 @@ http.createServer(function(request, response) {
                 } else {
                     response.write ('No document found with defined "find" criteria!');
                 }
+                db.close;
+                response.end('DB closed');
             });
 
 
