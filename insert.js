@@ -40,6 +40,7 @@ http.createServer(function(request, response) {
                 if (err) {
                     response.write('Insert failed ' + err + "\n");
                 } else {
+                    console.log(result);
                     response.write('Inserted ' + result.length +' documents successfully.');
                 }
                 //Close connection
