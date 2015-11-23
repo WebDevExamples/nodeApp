@@ -42,7 +42,7 @@ http.createServer(function(request, response) {
                 } else {
                     response.write('Fetched:', result);
                 }
-                if (result.isClosed()) {
+                if (result == null) {
                     response.end('Completed');
                     db.close();
                 }
