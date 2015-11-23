@@ -42,7 +42,9 @@ http.createServer(function(request, response) {
                 } else {
                     response.write('Fetched:', result);
                 }
+                response.end('Completed');
             });
+
         }
     });
 
