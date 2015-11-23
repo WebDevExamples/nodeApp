@@ -34,7 +34,7 @@ http.createServer(function(request, response) {
                 if (err) {
                     response.write(err);
                 } else if (numUpdated) {
-                    response.write ('Updated Successfully : ' +numUpdated);
+                    response.write ('Updated Successfully : ' + numUpdated + "\n");
                 } else {
                     response.write ('No document found with defined "find" criteria!');
                 }
