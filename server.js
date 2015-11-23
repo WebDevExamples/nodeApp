@@ -4,7 +4,7 @@
 var http = require('http');
 //lets require/import the mongodb native drivers.
 var mongodb = require('mongodb');
-var port = process.env.PORT || 1337;
+
 
 
 
@@ -16,24 +16,24 @@ var MongoClient = mongodb.MongoClient;
 var url = 'mongodb://main:basiltdog1@ds054308.mongolab.com:54308/rgutest';
 
 
-http.createServer(function(req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.write('Connecting \n');
+http.createServer(function(request, response) {
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    response.write('Connecting \n');
     // Use connect method to connect to the Server
     MongoClient.connect(url, function (err, db) {
-        res.write('Actually Connecting \n');
+        response.write('Connection Made \n');
         if (err) {
-            res.write('Unable to connect to the mongoDB server. Error:' + err + "\n");
+            response.write('Unable to connect to the mongoDB server. Error:' + err + "\n");
         } else {
             //HURRAY!! We are connected. :)
-            res.write('Connection established to' + url +"\n");
+            response.write('Connection established to' + url +"\n");
 
             // do some work here with the database.
 
             //Close connection
             db.close();
         }
-        res.end('Hello World\n');
+        response.end('Finished, Connection closed \n');
     });
 
-}).listen(port);
+}).listen(80);
