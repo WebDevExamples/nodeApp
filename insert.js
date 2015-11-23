@@ -41,11 +41,6 @@ http.createServer(function(request, response) {
                     response.write('Inserted ' + result.length +' documents successfully.);
                 }
             });
-
-
-
-            // do some work here with the database.
-
             //Close connection
             db.close();
         }
