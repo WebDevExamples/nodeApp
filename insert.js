@@ -36,7 +36,7 @@ http.createServer(function(request, response) {
             // Insert some users
             collection.insert([user1, user2, user3], function (err, result) {
                 if (err) {
-                    response.write('Insert failed' + err + "\n");
+                    response.write('Insert failed ' + err + "\n");
                 } else {
                     response.write('Inserted ' + result.length +' documents successfully.');
                 }
