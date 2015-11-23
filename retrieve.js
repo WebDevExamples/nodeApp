@@ -40,7 +40,7 @@ http.createServer(function(request, response) {
                 if (err) {
                     response.write(err);
                 } else {
-                    response.write('Fetched: ' + result);
+                    response.write('Fetched: ' + result.name + " : " + result.age + " : " + result.role.toString() +'/n');
                 }
                 if (result == null) {
                     response.end('Completed');
