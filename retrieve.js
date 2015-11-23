@@ -32,7 +32,8 @@ http.createServer(function(request, response) {
             var collection = db.collection('users');
 
             //We have a cursor now with our find criteria
-            var results = collection.find({name: 'modulus user'});
+            var results = collection.find({age: {$lte:30}});
+            //var results = collection.find({name: 'modulus user'});
 
 
             //Lets iterate on the result
