@@ -23,6 +23,8 @@ http.createServer(function(request, response) {
         response.write('Connection Made \n');
         if (err) {
             response.write('Unable to connect to the mongoDB server. Error:' + err + "\n");
+            //Close connection
+            db.close();
         } else {
             //HURRAY!! We are connected. :)
             response.write('Connection established to' + url +"\n");
@@ -40,9 +42,9 @@ http.createServer(function(request, response) {
                 } else {
                     response.write('Inserted ' + result.length +' documents successfully.');
                 }
+                //Close connection
+                db.close();
             });
-            //Close connection
-            db.close();
         }
         response.end('Finished, Connection closed \n');
     });
