@@ -1,4 +1,6 @@
 var Twitter = require('twitter');
+var http = require('http')
+var port = process.env.PORT || 1337;
 
 var client = new Twitter({
     consumer_key: 'uXl8060AfB6TtVZOjUPbPqiuU',
@@ -7,6 +9,12 @@ var client = new Twitter({
     access_token_secret: 'efrJVLugBwFeAVnWSx1Cx6Z8N8IJlSB3js7XjW4KUYiuc'
 });
 
-client.get('search/tweets', {q: 'node.js'}, function(error, tweets, response){
-    console.log(tweets);
-});
+http.createServer(function(request, response) {
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    client.get('search/tweets', {q: 'node.js'}, function(error, tweets, response){
+        console.log(tweets);
+        response.end(tweets);
+    });
+}).listen(port);
+
+
