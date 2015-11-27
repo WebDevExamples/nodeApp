@@ -12,10 +12,8 @@ var client = new Twitter({
 http.createServer(function(request, response) {
     response.writeHead(200, { 'Content-Type': 'text/plain' });
     client.get('search/tweets', {q: 'lolcats'}, function(error, tweets, response){
-        console.log(tweets);
-        for(var status in tweets) {
-            console.log(status);
-        }
+        response.end(JSON.stringify(data));
+
     });
 }).listen(port);
 
