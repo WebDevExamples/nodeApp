@@ -14,7 +14,7 @@ http.createServer(function(request, response) {
     client.get('search/tweets', {q: 'lolcats'}, function(error, tweets, response){
         console.log(tweets);
         for(var status in tweets) {
-            console.log(k, result[k]);
+            console.log(status);
         }
     });
 }).listen(port);
