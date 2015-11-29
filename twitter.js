@@ -12,7 +12,7 @@ var client = new Twitter({
 http.createServer(function(request, response) {
     response.writeHead(200, { 'Content-Type': 'text/plain' });
     client.get('search/tweets', {q: 'lolcats'}, function(error, tweets){
-        response.write(JSON.stringify(tweets));
+        response.write(tweets);
         response.end("done");
     });
 }).listen(port);
