@@ -14,7 +14,6 @@ http.createServer(function(request, response) {
 
     client.get('search/tweets', {q: 'lolcats' , count: '2'}, function(error, tweets){
         response.write(JSON.stringify(tweets));
-        response.end("done");
     });
 }).listen(port);
 
