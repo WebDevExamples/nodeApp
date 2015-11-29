@@ -17,7 +17,7 @@ http.createServer(function(request, response) {
         var json = [];
         for (var i =0; i< tweets.statuses.length ; i++)
         {
-            json.push({name: tweets.statuses[i].user.name, goals: tweets.statuses[i].text});
+            json.push({name: tweets.statuses[i].user.name, text: tweets.statuses[i].text});
         }
 
         response.end(JSON.stringify(json));
