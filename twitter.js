@@ -22,7 +22,7 @@ http.createServer(function(request, response) {
             json += '"text": ' + tweets.statuses[i].text;
             json += ' }'
         }
-        json +="] }";
+        json +='] }';
         response.end(JSON.stringify(json));
     });
 }).listen(port);
