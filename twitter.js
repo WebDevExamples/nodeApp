@@ -13,6 +13,16 @@ http.createServer(function(request, response) {
     response.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin' : '*'  });
 
     client.get('search/tweets', {q: 'lolcats' , count: '2'}, function(error, tweets){
+        var json = "";
+        json += "{ 'tweets':[ ";
+        for (var i =0; i< tweets.statuses.length ; i++)
+        {
+            json += "{ "
+            json += "'name': " + tweets.statuses[i].user.name +",";
+            json += "'text': " + tweets.statuses[i].text;
+            json += " }"
+        }
+        json +="] }";
         response.end(JSON.stringify(tweets));
     });
 }).listen(port);
