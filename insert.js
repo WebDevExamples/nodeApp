@@ -10,7 +10,7 @@ var port = process.env.PORT || 1337;
 
 
 // Connection URL. This is where your mongodb server is running.
-var url = 'mongodb://main:basiltdog1@ds054308.mongolab.com:54308/rgutest';
+var url = '';
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
 var MongoClient = mongodb.MongoClient;
@@ -41,7 +41,7 @@ http.createServer(function(request, response) {
                     response.write('Insert failed ' + err + "\n");
                 } else {
                     console.log(result);
-                    response.write('Inserted ' + result.n +' documents successfully. +"\n"');
+                    response.write('Inserted ' + result.insertedCount +' documents successfully. +"\n"');
                 }
                 //Close connection
                 db.close();
